@@ -1,0 +1,879 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Manrope:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  background-image:
+    linear-gradient(rgba(12,28,61,0.6), rgba(12,28,61,0.85)),
+    url(pexels-monstro-9499579.jpg);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.landing-header {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 20px 6vw;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.landing-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.landing-nav a {
+  color: rgba(255,255,255,0.7);
+}
+
+.landing-nav a.active,
+.landing-nav a:hover {
+  color: #E8951E;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.login-btn {
+  background: #E8951E;
+  color: #0c1c3d;
+  font-weight: 700;
+  padding: 10px 26px;
+  border-radius: 999px;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: #E8951E;
+  color: #0c1c3d;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   CUISINES HERO
+   ========================================= */
+
+.cuisines-hero {
+  position: relative;
+  text-align: center;
+
+  padding: 80px 6vw 60px;
+
+  background:
+    linear-gradient(rgba(46, 33, 231, 0.6),
+    rgba(235, 42, 42, 0.85)),
+    url(world-landmarks.jpg);
+
+  background-size: cover;
+  background-position: center;
+
+  border-bottom-left-radius: 50% 30px;
+  border-bottom-right-radius: 50% 30px;
+}
+
+.cuisines-hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  margin: 0 0 10px;
+}
+
+.cuisines-hero p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+
+/* =========================================
+   CUISINES LIST
+   ========================================= */
+
+.cuisines-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 6vw 80px;
+}
+
+.cuisine-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   CUISINE TILE
+   ========================================= */
+
+.cuisine-tile {
+  position: relative;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  min-height: 260px;
+  height: 260px;
+
+  box-shadow: 0 20px 40px -12px rgba(0,0,0,0.6);
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.4s ease;
+}
+
+
+/* =========================================
+   TILE IMAGE
+   ========================================= */
+
+.tile-img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* =========================================
+   TILE OVERLAY
+   ========================================= */
+
+.tile-overlay {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 20px 24px;
+
+  background:
+    linear-gradient(rgba(46, 33, 231, 0.6),
+    rgba(235, 42, 42, 0.85)),
+    url(world-landmarks.jpg);
+
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   FLAG
+   ========================================= */
+
+.tile-flag {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 3px solid #fff;
+  background: #fff;
+
+  margin-bottom: 10px;
+}
+
+.tile-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.cuisine-tile h3 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.cuisine-tile p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+
+  max-width: 320px;
+
+  margin: 0 0 16px;
+}
+
+
+/* =========================================
+   EXPLORE BUTTON
+   FIXED TO BOTTOM
+   ========================================= */
+
+.explore-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+
+/* =========================================
+   HOVER / FLOAT EFFECT
+   ========================================= */
+
+.cuisines-list :hover {
+  animation: float 1.5s ease-in-out infinite;
+  box-shadow: 0 20px 25px transparent;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  .cuisine-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   SEARCH
+   ========================================= */
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 999px;
+  outline: none;
+
+  font-size: 0.9rem;
+
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+
+  opacity: 0;
+
+  transition:
+    width 0.3s ease,
+    padding 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.search-input.active {
+  width: 200px;
+  padding: 10px 16px;
+  opacity: 1;
+  margin-right: 8px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   FADE IN
+   ========================================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   CARD ANIMATION DELAYS
+   ========================================= */
+
+.cuisine-card:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.cuisine-card:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.cuisine-card:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.cuisine-card:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+
+/* =========================================
+   MUSIC BUTTON
+   ========================================= */
+
+.music-toggle {
+  position: fixed;
+
+  bottom: 20px;
+  right: 20px;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  background: #E8951E;
+  color: #0c1c3d;
+
+  border: none;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  z-index: 200;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .landing-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px 5%;
+  }
+
+  .landing-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 18px;
+  }
+
+  .cuisines-hero {
+    padding: 50px 5% 30px;
+    text-align: center;
+  }
+
+  .cuisines-list {
+    padding: 20px 5% 60px;
+  }
+
+  .cuisine-row {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+}
+
+
+/* =========================================
+   PHONE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+
+  /* -------------------------
+     HEADER
+  ------------------------- */
+
+  .landing-header {
+    width: 100%;
+
+    padding: 15px 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand span {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+
+  .landing-nav {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 3px;
+  }
+
+  .landing-nav a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .cuisines-hero {
+    width: 100%;
+
+    padding: 40px 20px 25px;
+
+    text-align: center;
+  }
+
+  .cuisines-hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .cuisines-hero p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+
+  /* -------------------------
+     CUISINE LIST
+  ------------------------- */
+
+  .cuisines-list {
+    width: 100%;
+    padding: 15px 15px 60px;
+  }
+
+  .cuisine-row {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  /* -------------------------
+     CUISINE TILE
+  ------------------------- */
+
+  .cuisine-tile {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    height: 260px;
+    min-height: 260px;
+  }
+
+
+  /* -------------------------
+     TILE IMAGE
+  ------------------------- */
+
+  .tile-img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+    display: block;
+  }
+
+
+  /* -------------------------
+     OVERLAY
+  ------------------------- */
+
+  .tile-overlay {
+    width: 100%;
+    height: 100%;
+
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  /* -------------------------
+     FLAG
+  ------------------------- */
+
+  .tile-flag {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    margin-bottom: 10px;
+  }
+
+  .tile-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  /* -------------------------
+     TEXT
+  ------------------------- */
+
+  .tile-overlay h3 {
+    font-size: 1.5rem;
+    margin: 5px 0 8px;
+  }
+
+  .tile-overlay p {
+    font-size: 13px;
+    line-height: 1.6;
+
+    max-width: 320px;
+
+    margin: 0 auto 15px;
+  }
+
+
+  /* -------------------------
+     EXPLORE BUTTON
+  ------------------------- */
+
+  .explore-btn {
+    width: 100%;
+    max-width: 250px;
+
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    font-size: 14px;
+
+    margin-top: auto;
+  }
+
+
+  /* -------------------------
+     MUSIC BUTTON
+  ------------------------- */
+
+  .music-toggle {
+    width: 42px;
+    height: 42px;
+
+    right: 15px;
+    bottom: 15px;
+
+    font-size: 1rem;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+  .landing-nav {
+    gap: 1px;
+  }
+
+  .landing-nav a {
+    font-size: 11px;
+    padding: 5px 6px;
+  }
+
+  .cuisines-hero {
+    padding-top: 30px;
+  }
+
+  .cuisines-hero h1 {
+    font-size: 2rem;
+  }
+
+  .cuisines-hero p {
+    font-size: 13px;
+  }
+
+  .cuisines-list {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .cuisine-tile,
+  .tile-img {
+    min-height: 360px;
+    height: 360px;
+  }
+
+  .tile-overlay {
+    padding: 20px 15px;
+  }
+
+  .tile-overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .tile-overlay p {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================
+   BLUR / HOVER EFFECT
+   ========================================= */
+
+.cuisine-tile {
+  transition: all 0.4s ease;
+}
+
+.cuisine-tile.blurred {
+  filter: blur(4px) brightness(40%);
+  transform: scale(0.94);
+}
+
+.cuisine-tile.hovered {
+  filter: blur(0) brightness(100%);
+  transform: scale(1.05) translateY(-10px);
+  z-index: 999;
+}
+
+
+.search-box {
+    position: fixed;
+    top: 5px;
+    right: 5vw;
+
+    display: none;
+    align-items: center;
+    gap: 8px;
+
+    background: rgba(12, 28, 61, 0.95);
+    padding: 5px;
+    border-radius: 14px;
+
+    z-index: 9999;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.search-box input {
+    width: 230px;
+    padding: 11px 14px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+}
+
+.search-box button {
+    border: none;
+    background: #E8951E;
+    color: #0c1c3d;
+
+    padding: 10px 15px;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .search-box {
+        top: 120px;
+        right: 15px;
+        left: 15px;
+
+        justify-content: center;
+    }
+
+    .search-box input {
+        width: 100%;
+        min-width: 0;
+    }
+
+}

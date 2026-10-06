@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Recipes | Taste Beyond Borders</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" src="1 Minute Free Music for Cooking Videos. No Copyright Music by Mukesh..mp3" loop></audio>
+<button class="music-toggle" onclick="toggleMusic()">🔇</button>
+
+<div class="bg-overlay"></div>
+
+<header class="landing-header">
+
+    <div class="brand">
+        <img src="logo.png" alt="Taste Beyond Borders" class="brand-logo">
+        <span>Taste Beyond<br>Borders</span>
+    </div>
+
+    <nav class="landing-nav">
+        <a href="index.html">Home</a>
+        <a href="homepage2.html">Cuisines</a>
+        <a href="homepage3.html" class="active">Recipes</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+
+        <div class="header-actions">
+
+            <button
+                class="search-btn"
+                onclick="openSearch()">
+                🔍
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= SEARCH BOX ================= -->
+
+    <div
+        id="searchBox"
+        class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search recipes..."
+            onkeydown="if(event.key === 'Enter') searchRecipe()"
+        >
+
+        <button
+            onclick="searchRecipe()">
+            Search
+        </button>
+
+        <button
+            onclick="closeSearch()">
+            ✕
+        </button>
+
+    </div>
+
+        </nav>
+
+
+    </nav>
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     PHILIPPINES
+========================= -->
+
+<section class="recipes-intro fade-in" id="philippines">
+    <h1>Philippines</h1>
+    <p>Try these popular dishes from the Philippines.</p>
+</section>
+
+<section class="recipes-grid-section">
+
+    <div class="recipes-grid">
+
+        <!-- Adobo -->
+        <div class="recipe-card fade-in">
+
+            <img src="Adobong-Baboy-Filipino-Pork-Adobo-3-of-4.jpg"
+                 alt="Adobo"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="philippine.jpg" alt="Philippines flag">
+            </div>
+
+            <h3>Adobo</h3>
+
+            <span class="recipe-country">
+                <b>Philippines</b>
+            </span>
+
+            <p>
+                A deeply comforting savory stew featuring chicken,
+                pork, or a combination of both, slow-cooked in vinegar,
+                soy sauce, garlic, and bay leaves.
+            </p>
+
+            <a href="recipe-adobo.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Bicol Express -->
+        <div class="recipe-card fade-in">
+
+            <img src="Bicol-Express-480x504.png"
+                 alt="Bicol Express"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="philippine.jpg" alt="Philippines flag">
+            </div>
+
+            <h3>Bicol Express</h3>
+
+            <span class="recipe-country">
+                <b>Philippines</b>
+            </span>
+
+            <p>
+                A fiery, deeply savory Filipino stew made of pork belly
+                cooked in rich coconut milk and chili peppers.
+            </p>
+
+            <a href="recipe-bicolexpress.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Halo Halo -->
+        <div class="recipe-card fade-in">
+
+            <img src="halo halo.png"
+                 alt="Halo Halo"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="philippine.jpg" alt="Philippines flag">
+            </div>
+
+            <h3>Halo Halo</h3>
+
+            <span class="recipe-country">
+                <b>Philippines</b>
+            </span>
+
+            <p>
+                The ultimate summer dessert of the Philippines,
+                celebrated for its vibrant colors, contrasting
+                textures, and refreshing taste.
+            </p>
+
+            <a href="recipehalohalo.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Suggestion -->
+        <div class="recipe-card">
+
+            <img src="https://media.giphy.com/media/AGGZaMtGs31ccR5hKK/giphy.gif"
+                 alt="Suggest a dish"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="philippine.jpg" alt="Philippines flag">
+            </div>
+
+            <h3>Suggest Now!</h3>
+
+            <span class="recipe-country">
+                Philippines
+            </span>
+
+            <p>
+                Got a Filipino dish you'd love to see featured next?
+                Let us know your suggestion!
+            </p>
+
+            <a href="suggestion.html"
+               class="btn btn-primary view-btn">
+                Suggestion
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     JAPAN
+========================= -->
+
+<section class="recipes-intro" id="japan">
+
+    <h1>Japan</h1>
+
+    <p>
+        Try these popular dishes from Japan.
+    </p>
+
+</section>
+
+
+<section class="recipes-grid-section">
+
+    <div class="recipes-grid">
+
+
+        <!-- Sushi -->
+        <div class="recipe-card">
+
+            <img src="sushi.png"
+                 alt="Sushi"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="jap.jfif" alt="Japan flag">
+            </div>
+
+            <h3>Sushi</h3>
+
+            <span class="recipe-country">
+                Japan
+            </span>
+
+            <p>
+                A traditional Japanese dish defined fundamentally
+                by its use of vinegared short-grain rice.
+            </p>
+
+            <a href="sushi.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Ramen -->
+        <div class="recipe-card">
+
+            <img src="ramen.jfif"
+                 alt="Ramen"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="jap.jfif" alt="Japan flag">
+            </div>
+
+            <h3>Ramen</h3>
+
+            <span class="recipe-country">
+                Japan
+            </span>
+
+            <p>
+                A popular Japanese noodle dish served with
+                flavorful broth and various toppings.
+            </p>
+
+            <a href="ramen.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Takoyaki -->
+        <div class="recipe-card">
+
+            <img src="takoyaki.jfif"
+                 alt="Takoyaki"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="jap.jfif" alt="Japan flag">
+            </div>
+
+            <h3>Takoyaki</h3>
+
+            <span class="recipe-country">
+                Japan
+            </span>
+
+            <p>
+                A popular Japanese snack made from a wheat-flour
+                batter and traditionally filled with octopus.
+            </p>
+
+            <a href="takoyaki.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Suggestion -->
+        <div class="recipe-card">
+
+            <img src="https://media.giphy.com/media/AGGZaMtGs31ccR5hKK/giphy.gif"
+                 alt="Suggest a dish"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="jap.jfif" alt="Japan flag">
+            </div>
+
+            <h3>Suggest Now!</h3>
+
+            <span class="recipe-country">
+                Japan
+            </span>
+
+            <p>
+                Got a Japanese dish you'd love to see featured next?
+                Let us know your suggestion!
+            </p>
+
+            <a href="suggestion.html"
+               class="btn btn-primary view-btn">
+                Suggestion
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MEXICO
+========================= -->
+
+<section class="recipes-intro" id="mexico">
+
+    <h1>Mexico</h1>
+
+    <p>
+        Try these popular dishes from Mexico.
+    </p>
+
+</section>
+
+
+<section class="recipes-grid-section">
+
+    <div class="recipes-grid">
+
+
+        <!-- Tacos -->
+        <div class="recipe-card">
+
+            <img src="tacos.jfif"
+                 alt="Tacos"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="Mexican-Flag-750x375.jpg"
+                     alt="Mexico flag">
+            </div>
+
+            <h3>Tacos</h3>
+
+            <span class="recipe-country">
+                Mexico
+            </span>
+
+            <p>
+                A traditional Mexican dish made with a small,
+                hand-sized corn or wheat tortilla folded around
+                a savory filling.
+            </p>
+
+            <a href="tacos.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Carnitas -->
+        <div class="recipe-card">
+
+            <img src="carnitas.jfif"
+                 alt="Carnitas"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="Mexican-Flag-750x375.jpg"
+                     alt="Mexico flag">
+            </div>
+
+            <h3>Carnitas</h3>
+
+            <span class="recipe-country">
+                Mexico
+            </span>
+
+            <p>
+                A Mexican-style dish traditionally made from
+                seasoned and slow-cooked pork.
+            </p>
+
+            <a href="carnitas.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Quesadilla -->
+        <div class="recipe-card">
+
+            <img src="quesadilla Beef.jfif"
+                 alt="Quesadilla"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="Mexican-Flag-750x375.jpg"
+                     alt="Mexico flag">
+            </div>
+
+            <h3>Quesadilla</h3>
+
+            <span class="recipe-country">
+                Mexico
+            </span>
+
+            <p>
+                A Mexican dish made with a tortilla and melted
+                cheese, often combined with other fillings.
+            </p>
+
+            <a href="quesadilla.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Suggestion -->
+        <div class="recipe-card">
+
+            <img src="https://media.giphy.com/media/AGGZaMtGs31ccR5hKK/giphy.gif"
+                 alt="Suggest a dish"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="Mexican-Flag-750x375.jpg"
+                     alt="Mexico flag">
+            </div>
+
+            <h3>Suggest Now!</h3>
+
+            <span class="recipe-country">
+                Mexico
+            </span>
+
+            <p>
+                Got a Mexican dish you'd love to see featured next?
+                Let us know your suggestion!
+            </p>
+
+            <a href="suggestion.html"
+               class="btn btn-primary view-btn">
+                Suggestion
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ITALY
+========================= -->
+
+<section class="recipes-intro" id="italy">
+
+    <h1>Italy</h1>
+
+    <p>
+        Try these popular dishes from Italy.
+    </p>
+
+</section>
+
+
+<section class="recipes-grid-section">
+
+    <div class="recipes-grid">
+
+
+        <!-- Pizza -->
+        <div class="recipe-card">
+
+            <img src="pizza.jfif"
+                 alt="Pizza"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="italy.jfif" alt="Italy flag">
+            </div>
+
+            <h3>Pizza</h3>
+
+            <span class="recipe-country">
+                Italy
+            </span>
+
+            <p>
+                A savory flatbread dish made from flattened dough
+                topped with tomato sauce, cheese, and various
+                meats or vegetables.
+            </p>
+
+            <a href="pizza.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Lasagna -->
+        <div class="recipe-card">
+
+            <img src="lasagna.jfif"
+                 alt="Lasagna"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="italy.jfif" alt="Italy flag">
+            </div>
+
+            <h3>Lasagna</h3>
+
+            <span class="recipe-country">
+                Italy
+            </span>
+
+            <p>
+                A classic Italian pasta dish made with layers
+                of pasta, sauce, cheese, and other fillings.
+            </p>
+
+            <a href="lasagna.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Tiramisu -->
+        <div class="recipe-card">
+
+            <img src="tiramisu.jfif"
+                 alt="Tiramisu"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="italy.jfif" alt="Italy flag">
+            </div>
+
+            <h3>Tiramisu</h3>
+
+            <span class="recipe-country">
+                Italy
+            </span>
+
+            <p>
+                A popular Italian dessert made with coffee-soaked
+                ladyfingers, mascarpone cream, and cocoa.
+            </p>
+
+            <a href="tiramisu.html"
+               class="btn btn-primary view-btn">
+                View Recipe →
+            </a>
+
+        </div>
+
+
+        <!-- Suggestion -->
+        <div class="recipe-card">
+
+            <img src="https://media.giphy.com/media/AGGZaMtGs31ccR5hKK/giphy.gif"
+                 alt="Suggest a dish"
+                 class="recipe-img">
+
+            <div class="recipe-flag">
+                <img src="italy.jfif" alt="Italy flag">
+            </div>
+
+            <h3>Suggest Now!</h3>
+
+            <span class="recipe-country">
+                Italy
+            </span>
+
+            <p>
+                Got an Italian dish you'd love to see featured next?
+                Let us know your suggestion!
+            </p>
+
+            <a href="suggestion.html"
+               class="btn btn-primary view-btn">
+                Suggestion
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="java1.js"></script>
+
+</body>
+</html>
